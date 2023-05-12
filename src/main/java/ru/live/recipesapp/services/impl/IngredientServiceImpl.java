@@ -19,6 +19,7 @@ public class IngredientServiceImpl implements IngredientService {
     private final ValidationService validationService;
 
     public IngredientServiceImpl(ValidationService validationService) {
+
         this.validationService = validationService;
     }
 
