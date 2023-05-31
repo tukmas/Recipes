@@ -1,14 +1,21 @@
 package ru.live.recipesapp.model;
 import java.util.List;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-@Data
+import lombok.*;
+
+@Getter
+@Setter
+@EqualsAndHashCode
 @AllArgsConstructor
+@NoArgsConstructor
 public class Recipe {
     private String name;
     private int cookingTime;
-    protected List<Ingredient> ingredientList;
+    protected List<Ingredient> ingredients;
     private List<String> steps;
 
+    @Override
+    public String toString() {
+        return name + "\n Время приготовления: " + cookingTime;
+    }
 }
